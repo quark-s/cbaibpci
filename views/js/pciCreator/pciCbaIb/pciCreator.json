@@ -1,0 +1,44 @@
+{
+    "typeIdentifier": "pciCbaIb",
+    "label": "Likert Scale Sample",
+    "short": "Sample A",
+    "description": "A simple implementation of likert scale for PCI training purpose.",
+    "version": "1.0.0",
+    "author": "Sam Sipasseuth",
+    "email": "sam@taotesting.com",
+    "tags": [
+        "mcq",
+        "likert"
+    ],
+    "response": {
+        "cardinality": "record"
+    },
+    "runtime" : {
+        "hook" : "./runtime/pciCbaIb.js",
+        "libraries" : [
+            "./runtime/js/jquery_2_1_1_amd.js",
+            "./runtime/js/renderer.js"
+        ],
+        "stylesheets" : [
+            "./runtime/css/base.css",
+            "./runtime/css/pciCbaIb.css"
+        ],
+        "mediaFiles" : [
+            "./runtime/assets/ThumbDown.png",
+            "./runtime/assets/ThumbUp.png",
+            "./runtime/css/img/bg.png"
+        ]
+    },
+    "creator" : {
+        "icon": "./creator/img/icon.svg",
+        "hook": "./pciCreator.js",
+        "libraries" : [
+            "./creator/tpl/markup.tpl",
+            "./creator/tpl/propertiesForm.tpl",
+            "./creator/widget/Widget.js",
+            "./creator/widget/states/Question.js",
+            "./creator/widget/states/Answer.js",
+            "./creator/widget/states/states.js"
+        ]
+    }
+}
